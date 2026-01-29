@@ -22,7 +22,8 @@ import {
     Zap,
     Cloud,
     Smartphone,
-    CheckCircle
+    CheckCircle,
+    Info
 } from 'lucide-react';
 
 const About = () => {
@@ -34,6 +35,10 @@ const About = () => {
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 {/* Header */}
                 <div className="text-center mb-16">
+                    <div className="inline-flex items-center gap-2 px-4 py-2 bg-purple-100 text-purple-700 rounded-full text-sm font-medium mb-6">
+                        <Info className="w-4 h-4" />
+                        À propos
+                    </div>
                     <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-black mb-6">
                         À Propos de <span className="text-purple-800">ScoutTrack</span> et l'<span className="text-purple-800">ASCCI</span>
                     </h2>
