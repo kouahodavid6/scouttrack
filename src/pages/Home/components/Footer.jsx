@@ -1,86 +1,181 @@
-import React from 'react';
-import { MapPin, Phone, Mail, Globe, TentTree } from 'lucide-react';
-import { Link } from "react-router-dom";
+import { Mail, MapPin, Facebook, Instagram, Twitter, Shield, Users, Phone } from 'lucide-react';
 
 const Footer = () => {
+    const currentYear = new Date().getFullYear();
+
     return (
-        <footer className="bg-violet-900 text-white pt-10 pb-6">
+        <footer className="bg-purple-950 text-white py-16 border-t border-purple-900">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+                    {/* Logo et description */}
                     <div>
-                        <div className="flex items-center mb-4">
-                            <Link 
-                                to="/" 
-                                className="flex items-center space-x-2"
-                            >
-                                <TentTree className="h-8 w-8 text-yellow-400" />
-                                <span className="font-bold text-xl">Les Mohicans</span>
-                            </Link>
+                        <div className="flex items-center gap-4 mb-6">
+                            <img
+                                src="/LogoScoutTrack1.png" 
+                                alt="Logo ScoutTrack"
+                                className="w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 rounded-xl object-cover shadow-lg border border-gray-300"
+                            />
+                            <div>
+                                <h1 className="text-xl font-bold text-white">ScoutTrack</h1>
+                                <p className="text-xs text-purple-300">Plateforme ASCCI</p>
+                            </div>
                         </div>
-                        <p className="text-sm text-violet-200 mb-4">
-                            Groupe scout catholique de la paroisse Saint Sauveur Miséricordieux, 
-                            situé à Yopougon, faisant partie du district Les Blackfeet.
+                        <p className="text-purple-200 text-sm leading-relaxed mb-6">
+                            Solution numérique complète pour la gestion moderne et efficace du mouvement scout ivoirien.
                         </p>
-                        <div className="flex items-center mt-4">
-                            <MapPin className="h-5 w-5 text-yellow-400 mr-2" />
-                            <span className="text-sm">Yopougon, Côte d'Ivoire</span>
+                        <div className="flex gap-3">
+                            <a href="#" className="bg-purple-900 p-2.5 rounded-lg hover:bg-purple-800 transition-colors duration-300 border border-purple-800">
+                                <Facebook className="w-4 h-4 text-purple-200" />
+                            </a>
+                            <a href="#" className="bg-purple-900 p-2.5 rounded-lg hover:bg-purple-800 transition-colors duration-300 border border-purple-800">
+                                <Instagram className="w-4 h-4 text-purple-200" />
+                            </a>
+                            <a href="#" className="bg-purple-900 p-2.5 rounded-lg hover:bg-purple-800 transition-colors duration-300 border border-purple-800">
+                                <Twitter className="w-4 h-4 text-purple-200" />
+                            </a>
                         </div>
                     </div>
-                
+
+                    {/* Navigation */}
                     <div>
-                        <h3 className="text-lg font-semibold mb-4">Contact</h3>
-                        <div className="space-y-2">
-                            <div className="flex items-center">
-                                <Phone className="h-5 w-5 text-yellow-400 mr-2" />
-                                <span className="text-sm">+225 01 71 13 62 61</span>
-                            </div>
-                            <div className="flex items-center">
-                                <Mail className="h-5 w-5 text-yellow-400 mr-2" />
-                                <span className="text-sm">contact@lesmohicans.org</span>
-                            </div>
-                            <div className="flex items-center">
-                                <Globe className="h-5 w-5 text-yellow-400 mr-2" />
-                                <span className="text-sm">www.lesmohicans.org</span>
-                            </div>
-                        </div>
+                        <h4 className="text-sm font-semibold text-purple-100 mb-6 uppercase tracking-wider">
+                            Navigation
+                        </h4>
+                        <ul className="space-y-3">
+                            <li>
+                                <a href="#accueil" className="text-purple-300 hover:text-white transition-colors duration-300 text-sm flex items-center gap-2 group">
+                                    <span className="w-1.5 h-1.5 bg-purple-600 rounded-full group-hover:bg-purple-500 transition-colors"></span>
+                                    Accueil
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#hierarchie" className="text-purple-300 hover:text-white transition-colors duration-300 text-sm flex items-center gap-2 group">
+                                    <span className="w-1.5 h-1.5 bg-purple-600 rounded-full group-hover:bg-purple-500 transition-colors"></span>
+                                    Hiérarchie
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#unites" className="text-purple-300 hover:text-white transition-colors duration-300 text-sm flex items-center gap-2 group">
+                                    <span className="w-1.5 h-1.5 bg-purple-600 rounded-full group-hover:bg-purple-500 transition-colors"></span>
+                                    Unités
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#fonctionnalites" className="text-purple-300 hover:text-white transition-colors duration-300 text-sm flex items-center gap-2 group">
+                                    <span className="w-1.5 h-1.5 bg-purple-600 rounded-full group-hover:bg-purple-500 transition-colors"></span>
+                                    Fonctionnalités
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#avantages" className="text-purple-300 hover:text-white transition-colors duration-300 text-sm flex items-center gap-2 group">
+                                    <span className="w-1.5 h-1.5 bg-purple-600 rounded-full group-hover:bg-purple-500 transition-colors"></span>
+                                    Avantages
+                                </a>
+                            </li>
+                        </ul>
                     </div>
-                
+
+                    {/* Légal */}
                     <div>
-                        <h3 className="text-lg font-semibold mb-4">Nos branches</h3>
-                        <ul className="space-y-2 text-sm">
-                            <li className="flex items-center">
-                                <span className="w-3 h-3 bg-pink-500 rounded-full mr-2"></span>
-                                Oisillons (3-7 ans)
+                        <h4 className="text-sm font-semibold text-purple-100 mb-6 uppercase tracking-wider flex items-center gap-2">
+                            <Shield className="w-4 h-4 text-purple-400" />
+                            Légal
+                        </h4>
+                        <ul className="space-y-3">
+                            <li>
+                                <a href="#" className="text-purple-300 hover:text-white transition-colors duration-300 text-sm">
+                                    Mentions légales
+                                </a>
                             </li>
-                            <li className="flex items-center">
-                                <span className="w-3 h-3 bg-yellow-500 rounded-full mr-2"></span>
-                                Louveteaux (8-11 ans)
+                            <li>
+                                <a href="#" className="text-purple-300 hover:text-white transition-colors duration-300 text-sm">
+                                    Politique de confidentialité
+                                </a>
                             </li>
-                            <li className="flex items-center">
-                                <span className="w-3 h-3 bg-green-500 rounded-full mr-2"></span>
-                                Éclaireurs (12-14 ans)
+                            <li>
+                                <a href="#" className="text-purple-300 hover:text-white transition-colors duration-300 text-sm">
+                                    Conditions d'utilisation
+                                </a>
                             </li>
-                            <li className="flex items-center">
-                                <span className="w-3 h-3 bg-orange-500 rounded-full mr-2"></span>
-                                Cheminots (15-17 ans)
+                        </ul>
+                    </div>
+
+                    {/* Contact */}
+                    <div>
+                        <h4 className="text-sm font-semibold text-purple-100 mb-6 uppercase tracking-wider flex items-center gap-2">
+                            <Users className="w-4 h-4 text-purple-400" />
+                            Contact
+                        </h4>
+                        <ul className="space-y-4">
+                            <li className="flex items-start gap-3 group">
+                                <div className="w-8 h-8 bg-purple-900 rounded flex items-center justify-center flex-shrink-0 group-hover:bg-purple-800 transition-colors border border-purple-800">
+                                    <Mail className="w-3.5 h-3.5 text-purple-300" />
+                                </div>
+                                <div>
+                                    <p className="text-xs text-purple-400 mb-0.5">Email</p>
+                                    <p className="text-sm text-purple-200 group-hover:text-white transition-colors">scouttrack@gmail.com</p>
+                                </div>
                             </li>
-                            <li className="flex items-center">
-                                <span className="w-3 h-3 bg-red-500 rounded-full mr-2"></span>
-                                Routiers (18-21 ans)
+                            <li className="flex items-start gap-3 group">
+                                <div className="w-8 h-8 bg-purple-900 rounded flex items-center justify-center flex-shrink-0 group-hover:bg-purple-800 transition-colors border border-purple-800">
+                                    <Phone className="w-3.5 h-3.5 text-purple-300" />
+                                </div>
+                                <div>
+                                    <p className="text-xs text-purple-400 mb-0.5">Téléphone</p>
+                                    <p className="text-sm text-purple-200 group-hover:text-white transition-colors">+225 20 22 35 22</p>
+                                </div>
+                            </li>
+                            <li className="flex items-start gap-3 group">
+                                <div className="w-8 h-8 bg-purple-900 rounded flex items-center justify-center flex-shrink-0 group-hover:bg-purple-800 transition-colors border border-purple-800">
+                                    <MapPin className="w-3.5 h-3.5 text-purple-300" />
+                                </div>
+                                <div>
+                                    <p className="text-xs text-purple-400 mb-0.5">Adresse</p>
+                                    <p className="text-sm text-purple-200 group-hover:text-white transition-colors">Abidjan, Plateau</p>
+                                    <p className="text-xs text-purple-400">Côte d'Ivoire</p>
+                                </div>
                             </li>
                         </ul>
                     </div>
                 </div>
-                
-                <div className="border-t border-violet-800 mt-8 pt-6 text-center text-sm text-violet-300">
-                    <p className="text-sm text-white">
-                        💻 Développé par <a href="https://lien-du-portfolio.com" className="text-yellow-400 hover:underline">Kouaho Ekissi David Emmanuel</a>
-                    </p>
-                    <p>© {new Date().getFullYear()} Les Mohicans. Tous droits réservés.</p>
+
+                {/* Séparateur */}
+                <div className="border-t border-purple-800 my-8"></div>
+
+                {/* Bottom section */}
+                <div className="flex flex-col lg:flex-row items-center justify-between gap-6">
+                    <div className="text-center lg:text-left">
+                        <p className="text-sm flex text-purple-300">
+                            <img 
+                                src="/logo_ascci.png" 
+                                alt="Logo ScoutTrack"
+                                className="ml-1 relative w-5 h-5 transform group-hover:scale-110 transition-transform duration-500 shadow-2xl"
+                            />
+                            Une initiative de l'Association des Scouts Catholiques de Côte d'Ivoire
+                        </p>
+                        <p className="text-xs text-purple-400 mt-1">
+                            © {currentYear} ScoutTrack. Tous droits réservés.
+                        </p>
+                    </div>
+
+                    <div className="text-center lg:text-right">
+                        <p className="text-sm text-purple-300">
+                            Développé par{' '}
+                            <span 
+                                className="text-white hover:text-purple-100 cursor-pointer hover:underline decoration-wavy decoration-purple-500 font-medium transition-colors"
+                                onClick={() => window.open('#', '_blank')}
+                            >
+                                David Kouaho
+                            </span>
+                        </p>
+                        <p className="text-xs text-purple-400 mt-1">
+                            Solution certifiée et sécurisée
+                        </p>
+                    </div>
                 </div>
             </div>
         </footer>
     );
-};
+}
 
 export default Footer;
